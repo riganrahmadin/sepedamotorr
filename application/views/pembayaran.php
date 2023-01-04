@@ -2,15 +2,6 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="btn btn-sm btn-success">
-                <?php $grand_total = 0;
-                if ($keranjang = $this->cart->contents()) {
-                    foreach ($keranjang as $items) {
-                        $grand_total = $grand_total + $items['subtotal'];
-                    }
-                    echo "<h5>Total Belanja  : Rp." . number_format($grand_total, 0, ',', '.');
-                 ?>
-            </div>
             <h3>input alamat pengiriman dan pembayaran</h3>
             <form method="post" action="<?php echo base_url() ?>dashboard/proses_pesanan">
                 <div class="form-group">
@@ -44,6 +35,15 @@
                 </div>
                 <button type="submit" class="btn btn-sm btn-primary mb-3">Pesan</button>
             </form>
+            <div class="btn btn-sm btn-success">
+                <?php $grand_total = 0;
+                if ($keranjang = $this->cart->contents()) {
+                    foreach ($keranjang as $items) {
+                        $grand_total = $grand_total + $items['subtotal'];
+                    }
+                    echo "<h5>Total Belanja  : Rp." . number_format($grand_total, 0, ',', '.');
+                 ?>
+            </div>
             <?php 
                 }else{
                     echo "<h5>Keranjang Belanja anda Kosong";

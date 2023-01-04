@@ -1,5 +1,4 @@
 <?php
-
 class Model_invoice extends CI_Model{
     public function index(){
         date_default_timezone_set('Asia/Jakarta');
@@ -30,18 +29,14 @@ class Model_invoice extends CI_Model{
 
         return TRUE;
     }
-    public function tampil_data(){
+    public function tampil_data()
+    {
         $result = $this->db->get('tbl_invoice');
-        if($result->num_rows() > 0 ){
-            return $result->result();
-        }else{
-            return false;
-        }
+        return $result->result();
     }
     public function ambil_id_invoice($id_invoice)
     {
-        $result = $this->db->where('id', $id_invoice)->limit(
-            1)->get('tbl_invoice');
+        $result = $this->db->where('id', $id_invoice)->get('tbl_invoice');
         if($result->num_rows() > 0){
             return $result->row();
         }else{

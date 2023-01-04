@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="row text-center mt-4">
-            <?php foreach ($barang as $brg) : ?>
+            <?php foreach ($Suzuki as $brg) : ?>
 
                 <div class="card ml-3 mb-3" style="width: 16rem;">
                     <img src="<?php echo base_url() . '/uploads/' . $brg->gambar ?>" class="card-img-top" alt="...">
@@ -31,14 +31,8 @@
                         <small><?php echo $brg->model ?></small>
                         <small><?php echo $brg->tipe ?></small> <br>
                         <span class="badege badge-pill badge-success">Rp. <?php echo number_format($brg->harga, 0, ',', '.') ?></span>
-                        <?php
-                                if ($brg->stok == "0") {
-                                    echo "<div class='btn btn-danger' disable>Stok Kosong</div>";
-                                }else {
-                                    echo anchor('dashboard/tambah_ke_keranjang/' . $brg->idbarang, '<div class="btn btn-sm btn-primary">Tambah keranjang</div>');
-                                    echo anchor('dashboard/detail/' . $brg->idbarang, '<div class="btn btn-sm btn-success">Detail</div>');
-                                }
-                            ?>
+                        <?php echo anchor('dashboard/tambah_ke_keranjang/' . $brg->idbarang, '<div class="btn btn-sm btn-primary">Tambah keranjang</div>') ?>
+                        <?php echo anchor('dashboard/detail/' . $brg->idbarang, '<div class="btn btn-sm btn-success">Detail</div>') ?>
                     </div>
                 </div>
 

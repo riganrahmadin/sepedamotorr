@@ -1,5 +1,10 @@
-  <!-- Bootstrap core JavaScript-->
-  <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
+<footer class="py-5 bg-dark mt-4">
+     <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="<?php echo base_url()?>https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+          <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery.min.js"></script>
   <script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -15,6 +20,6 @@
   <script src="<?php echo base_url() ?>assets/js/demo/chart-area-demo.js"></script>
   <script src="<?php echo base_url() ?>assets/js/demo/chart-pie-demo.js"></script>
 
-  </body>
-
-  </html>
+        <script src="<?php echo base_url()?>assets/js/scripts.js"></script>
+    </body>
+</html>

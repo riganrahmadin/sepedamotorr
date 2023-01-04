@@ -48,8 +48,12 @@
                         <input type="text" name="nama" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label>Model</label>
-                        <input type="text" name="model" class="form-control">
+                        <label>Kategori</label>
+                        <select class="form-control" name="model">
+                            <option>Yamaha</option>
+                            <option>Honda</option>
+                            <option>Suzuki</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Tipe</label>

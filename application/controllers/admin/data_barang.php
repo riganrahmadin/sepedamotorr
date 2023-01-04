@@ -79,10 +79,10 @@ class Data_barang extends CI_Controller{
     public function detail($idbarang)
     {
         $data['barang'] = $this->model_barang->detail_brg($idbarang);
-        $this->load->view('templates/header');
-        $this->load->view('templates/sidebar');
+        $this->load->view('templates_admin/header');
+        $this->load->view('templates_admin/sidebar');
         $this->load->view('admin/detail_barang', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates_admin/footer');;
     }
     public function hapus($id){
         $where = array('idbarang' => $id);
