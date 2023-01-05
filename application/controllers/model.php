@@ -1,4 +1,5 @@
 <?php
+defined('BASEPATH') or exit('No direct script access allowed');
 class Model extends CI_Controller{
     public function yamaha(){
             $data['Yamaha'] = $this->model_kategori->data_Yamaha()->result();   

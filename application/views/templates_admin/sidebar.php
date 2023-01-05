@@ -110,7 +110,7 @@
                             <div>Selamat datang  <?php echo $this->session->userdata('username');?></div>
                             <li><?php echo anchor('auth/logout' , 'Logout')?></li>
                             <?php } else{ ?>
-                                <li><?php echo anchor('auth/login','login'); ?></li>
+                                <li><?php echo anchor('auth/login', 'Login'); ?></li>
                                 <?php } ?>
                         </button>
                          <button  class="btn btn-outline-info " type="submit" id="text">
